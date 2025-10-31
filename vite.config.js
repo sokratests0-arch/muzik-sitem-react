@@ -15,6 +15,8 @@ export default defineConfig({
   optimizeDeps: {
     include: ['jsmediatags'],
   },
+  // YENİ EK: Sitemizin GitHub Pages veya repo alt dizini için base yolu
+  base: "/muzik-sitem-react/",
   // jsmediatags'in package.json'unda "browser" alanı yanlış gösteriyor ve Vite
   // paket girişini çözemiyor. Bu yüzden paket içindeki çalışır hal dosyaya alias
   // ile işaret ediyoruz.
