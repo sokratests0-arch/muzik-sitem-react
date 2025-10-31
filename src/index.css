@@ -1,0 +1,44 @@
+/* 1. Modern fontumuzu Google'dan çekiyoruz (Poppins hala harika) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* 2. YENİ RENK PALETİ (Spotify/Modern Tema) */
+:root {
+  --font-family: 'Poppins', sans-serif;
+  
+  /* Koyu Tema Renkleri */
+  --background-color: #121212; /* Spotify'ın ana arkaplanı */
+  --container-color: #1e1e1e; /* Kartlar/Formlar için biraz açık ton */
+  --container-light: #282828; /* Hover ve iç bileşenler için */
+  
+  /* Yazı Renkleri */
+  --text-color: #FFFFFF;
+  --text-color-light: #B3B3B3; /* Soluk yazılar (Sanatçı adı vb.) */
+
+  /* YENİ "IŞIL IŞIL" Vurgu Renkleri (Mavi/Turkuaz) */
+  --primary-color: #3B82F6;   /* Canlı Mavi */
+  --secondary-color: #14B8A6; /* Canlı Turkuaz */
+}
+
+/* 3. Temel sıfırlamalar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}

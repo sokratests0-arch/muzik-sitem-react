@@ -1,0 +1,330 @@
+/* 1. Ana Konteyner */
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+/* 2. Navigasyon (Yeni Stil) */
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--container-light);
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem; /* Link arası boşluk */
+}
+
+nav a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* 3. YENİ "Işıl Işıl" Başlık (Mavi/Turkuaz Gradient) */
+.App-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.App-header h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* 4. FORM STİLLERİ (Modernleştirildi) */
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: var(--container-color);
+  border-radius: 12px; /* Daha yumuşak kenarlar */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--container-light);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--text-color-light);
+  font-size: 0.9rem;
+  text-transform: uppercase; /* Spotify/Apple stili etiketler */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background-color: var(--container-light);
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* Yeni mavi "ışıl" efekt */
+}
+
+/* 5. YENİ "Işıl Işıl" Buton (Mavi/Turkuaz Gradient) */
+.form-button {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 1.1rem;
+  font-weight: 700; /* Daha kalın */
+  color: white;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background-size: 200% 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-button:hover {
+  transform: scale(1.02);
+  background-position: right center; /* Gradient kayma efekti */
+  box-shadow: 0 5px 20px rgba(20, 184, 166, 0.4);
+}
+
+.form-button:disabled {
+  background: #555;
+  cursor: not-allowed;
+  transform: scale(1);
+  box-shadow: none;
+}
+
+/* 6. Mesajlar (Hata ve Başarı) (Yenilendi) */
+.message {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.message.success {
+  background-color: rgba(20, 184, 166, 0.1);
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.message.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: #EF4444;
+  color: #EF4444;
+}
+
+/* 7. Anasayfa içeriği (Giriş yapmayanlar için) */
+.home-content {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--container-color);
+  border-radius: 12px;
+}
+.home-content p {
+  color: var(--text-color-light);
+  font-size: 1.1rem;
+}
+
+/* 8. Şarkı Listesi Stilleri (YENİLENDİ) */
+.track-list-container {
+  margin-top: 4rem;
+  /* Konteyner arkaplanını kaldırıp daha temiz bir görünüm alıyoruz */
+  border-top: 1px solid var(--container-light);
+  padding-top: 2rem;
+}
+
+.track-list-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* SPOTIFY/APPLE MÜZİK KART STİLİ */
+.track-item {
+  display: flex; /* Yatayda hizala */
+  align-items: center; /* Dikeyde ortala */
+  gap: 1.5rem;
+  padding: 1.25rem;
+  background-color: var(--container-color);
+  border-radius: 12px;
+  border: 1px solid var(--container-color);
+  transition: all 0.3s ease;
+}
+
+.track-item:hover {
+  background-color: var(--container-light);
+  border-color: #444;
+  transform: translateY(-2px); /* Hafif havalanma */
+}
+
+.track-info {
+  flex-grow: 1; /* Bilgi kısmı tüm boşluğu kaplasın */
+}
+
+.track-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.track-artist {
+  font-size: 1rem;
+  color: var(--text-color-light);
+  font-style: normal; /* İtalik kaldırdık, daha modern */
+}
+
+/* 9. HTML5 Müzik Çalar Stili (YENİLENDİ) */
+.track-player {
+  width: 40%; /* Çaları sağa yasla ve küçült */
+  min-width: 250px;
+  margin-top: 0;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: var(--container-light);
+  border-radius: 8px;
+}
+audio::-webkit-media-controls-play-button {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+audio::-webkit-media-controls-play-button:hover {
+  background-color: var(--secondary-color);
+}
+audio::-webkit-media-controls-timeline {
+  background-color: var(--background-color);
+  border-radius: 25px;
+  border: 1px solid #555;
+}
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: var(--text-color-light);
+}
+audio::-webkit-media-controls-volume-slider {
+  background-color: var(--background-color);
+  border-radius: 25px;
+}
+
+
+/* 10. "Çıkış Yap" butonu stili */
+.nav-logout-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-logout-button:hover {
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* 11. Havalı Dosya Yükleme Alanı */
+
+/* Orijinal, çirkin input'u gizle */
+.hidden-file-input {
+  display: none;
+}
+
+/* "Dosya Seç" butonu gibi görünecek 'label' (ikincil buton stilimiz) */
+.form-button-secondary {
+  display: inline-block; /* Buton gibi davranması için */
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+}
+
+.form-button-secondary:hover {
+  background-color: rgba(59, 130, 246, 0.1); /* Mavi "ışıl" hover */
+  transform: scale(1.02);
+}
+
+/* Seçilen dosya adının görüneceği alan */
+.file-name-display {
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+  font-style: italic;
+}
+
+/* Küçük inline spinner (otomatik doldurma/etiket okuma sırasında) */
+.inline-spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(0,0,0,0.12);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.cover-preview {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--container-light);
+  margin-top: 0.5rem;
+}
