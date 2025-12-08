@@ -1,0 +1,152 @@
+/* src/pages/SpotifyPage.css */
+
+/* Ana Kapsayıcı */
+.spotify-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  animation: slideUp 0.8s ease-out;
+}
+
+/* --- CAM OYNATICI (PLAYER) --- */
+.now-playing-glass {
+  background: rgba(29, 185, 84, 0.15); /* Spotify Yeşili Şeffaf */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(29, 185, 84, 0.3);
+  border-radius: 24px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  margin-bottom: 50px;
+  position: sticky;
+  top: 20px;
+  z-index: 100; /* Listenin üzerinde kalsın */
+}
+
+/* Albüm Kapağı */
+.now-playing-cover {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.now-playing-glass:hover .now-playing-cover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Şarkı Bilgisi */
+.now-playing-info {
+  flex-grow: 1;
+}
+
+.now-playing-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+}
+
+.now-playing-info p {
+  margin: 5px 0 0 0;
+  color: #b3b3b3;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Kontrol Butonları */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.control-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Oynat/Duraklat Butonu (Özel Stil) */
+.play-btn {
+  background: #1db954;
+  color: #000;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.6);
+}
+
+.play-btn:hover {
+  background: #1ed760;
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(29, 185, 84, 0.8);
+}
+
+/* --- LİSTE VE KARTLAR --- */
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Spotify Kart Özelleştirmesi (Genel kartlardan biraz farklı olabilir) */
+.spotify-container .song-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+.spotify-container .song-card:hover {
+  background: rgba(29, 185, 84, 0.1);
+  border-color: #1db954;
+  transform: translateY(-5px);
+}
+
+.spotify-container .card-icon img {
+  transition: 0.3s;
+}
+
+.spotify-container .song-card:hover .card-icon img {
+  transform: scale(1.05);
+}
+
+/* Animasyon */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+  .now-playing-glass {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .controls {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
