@@ -1,11 +1,12 @@
 {
   "name": "muzik-sitem-react",
-  "homepage": "https://sokratests0-arch.github.io/muzik-sitem-react",
+  "homepage": "https://muhammetjan625.github.io/muzik-sitem-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start:server": "node server/index.js",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -22,6 +23,7 @@
     "react-hook-form": "^7.66.0",
     "react-infinite-scroll-component": "^6.1.0",
     "react-player": "^3.4.0",
+    "express": "^4.18.2",
     "react-router-dom": "^6.24.1",
     "yup": "^1.7.1"
   },

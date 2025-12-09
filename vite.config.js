@@ -45,9 +45,9 @@ export default defineConfig(({ command }) => {
       }
     },
     
-    // Production için base ayarı: GitHub Pages altında projenin doğru path'ten
-    // sunulmasını sağlar. Geliştirme sırasında root('/') kullanılır.
-    base: command === 'build' ? '/muzik-sitem-react/' : '/',
+    // DİKKAT: Spotify testi yaparken 'base' ayarını kapalı tutuyoruz.
+    // Eğer GitHub Pages'e yüklerken tekrar açmanız gerekirse burayı aktif edin.
+    // base: "/muzik-sitem-react/",
     
     // jsmediatags hatasını çözen alias ayarınız (Korundu)
     resolve: {

@@ -248,8 +248,8 @@ function App() {
         <ul className="nav-links">
           <li><Link to="/" className="nav-item">Ana Sayfa</Link></li>
           <li>
-            <span className="nav-item" style={{color:'#1db954', opacity: 0.95, cursor: 'default'}}>
-              Spotify <span style={{fontSize: '0.75rem', color: '#ffd700'}}>(yakında)</span>
+            <span className="nav-item nav-spotify"> 
+              Spotify <span className="nav-badge">(yakında)</span>
             </span>
           </li>
           <li><Link to="/youtube" className="nav-item" style={{color: '#ff0000'}}>YouTube</Link></li>
